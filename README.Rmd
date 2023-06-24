@@ -52,3 +52,11 @@ imtp_tmle(ex, "A", "Y", paste0("X", 1:3), cens = "R",
 #>     Std. error: 0.1054
 #>         95% CI: (1.3515, 1.7647)
 ```
+
+## References
+
+Edward H. Kennedy (2019) Nonparametric Causal Effects Based on Incremental Propensity Score Interventions, Journal of the American Statistical Association, 114:526, 645-656, DOI: 10.1080/01621459.2017.1422737
+
+Kwangho Kim and Edward H. Kennedy and Ashley I. Naimi (2019) Incremental Intervention Effects in Studies with Many Timepoints, Repeated Outcomes, and Dropout, arXiv: 1907.04004
+
+Iván Díaz, Nicholas Williams, Katherine L. Hoffman & Edward J. Schenck (2021) Non-parametric causal effects based on longitudinal modified treatment policies, Journal of the American Statistical Association, DOI: 10.1080/01621459.2021.1955691
