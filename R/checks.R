@@ -29,6 +29,27 @@ check_trt_character <- function(trt, tau) {
   TRUE
 }
 
+check_imtp_list <- function(x) {
+	all_imtp <- all(unlist(lapply(x, is.imtp)))
+	if (!all_imtp) {
+		return("Objects must be of type 'imtp'")
+	}
+	TRUE
+}
+
+assertImtpList <- checkmate::makeAssertionFunction(check_imtp_list)
+
+check_consistent_ns <- function(x) {
+	ns <- unlist(lapply(x, function(x) nrow(x$density_ratios)))
+	all_ns <- all(ns == ns[1])
+	if (!all_ns) {
+		return("Objects should all be fitted from the same data.")
+	}
+	TRUE
+}
+
+assertConsistentNs <- checkmate::makeAssertionFunction(check_consistent_ns)
+
 assertTrtCharacter <- checkmate::makeAssertionFunction(check_trt_character)
 
 check_reserved_names <- function(x) {

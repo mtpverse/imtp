@@ -25,7 +25,8 @@ Imports:
     progressr,
     data.table (>= 1.13.0),
     checkmate (>= 2.1.0),
-    SuperLearner
+    SuperLearner, 
+    simul
 Suggests: 
     testthat (>= 3.0.0),
     covr,

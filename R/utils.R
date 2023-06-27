@@ -219,3 +219,7 @@ risk_indicators <- function(x) {
 
   x[1:(length(x) - 1)]
 }
+
+is.imtp <- function(x) {
+	class(x) == "imtp"
+}
