@@ -34,7 +34,8 @@ imtp_simul <- function(fits, reps = 1e5, level = 0.95) {
 		ci_low <- x$theta - (cv * x$standard_error)
 		ci_high <- x$theta + (cv * x$standard_error)
 
-		data.frame(theta = x$theta,
+		data.frame(delta = x$delta,
+							 theta = x$theta,
 							 mult.conf.low = ci_low,
 							 mult.conf.high = ci_high)
 	})
